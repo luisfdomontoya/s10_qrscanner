@@ -32,8 +32,12 @@ class HomePage extends StatelessWidget {
 class _HomePageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    //Aquí estoy trayendo mi provider UiProvider:
     final uiProvider = Provider.of<UiProvider>(context);
 
+    //Usamos nuestro provider y usamos su información,
+    //que en este caso sería la propiedad privada
+    //selectedMenuOpt que se la asignamos a currentIndex:
     final currentIndex = uiProvider.selectedMenuOpt;
 
     switch (currentIndex) {

@@ -12,8 +12,17 @@ class AppState extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //El widget Multiprovider nos va a servir para decirle
+    //a nuestra aplicación: "necesito que vayas a buscar en tu
+    //árbol de widgets la clase llamada UiProvider (en este
+    //caso)". Cuando ya tenga esta clase ya podré acceder a toda
+    //su información, que para este caso sería la propiedad
+    //_selectedMenuOpt:
     return MultiProvider(
+      //la propiedad 'providers' es obligatoria:
       providers: [
+        //'create' es una instrucción que se ejecutará cuando no
+        //haya ninguna instancia de mi provider creado:
         ChangeNotifierProvider(create: (context) => new UiProvider())
       ],
       child: const MyApp(),
