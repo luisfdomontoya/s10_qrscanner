@@ -25,12 +25,16 @@ class ScanModel {
   String? type;
   String value;
 
+  //Este factory contructor recibe un Map (que es lo mismo que un
+  //objeto literal de javascript) y retorna una nueva instancia de
+  //ScanModel:
   factory ScanModel.fromJson(Map<String, dynamic> json) => ScanModel(
         id: json["id"],
         type: json["type"],
         value: json["value"],
       );
 
+  //Retorna un Map:
   Map<String, dynamic> toJson() => {
         "id": id,
         "type": type,

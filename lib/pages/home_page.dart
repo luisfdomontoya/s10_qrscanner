@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:s10_qrscanner/pages/pages.dart';
+import 'package:s10_qrscanner/providers/db_provider.dart';
 import 'package:s10_qrscanner/providers/ui_provider.dart';
 import 'package:s10_qrscanner/widgets/widgets.dart';
 
@@ -39,6 +40,8 @@ class _HomePageBody extends StatelessWidget {
     //que en este caso sería la propiedad privada
     //selectedMenuOpt que se la asignamos a currentIndex:
     final currentIndex = uiProvider.selectedMenuOpt;
+
+    DBProvider.db.database;
 
     switch (currentIndex) {
       case 0:
