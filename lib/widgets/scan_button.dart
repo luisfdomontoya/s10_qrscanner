@@ -14,6 +14,7 @@ class ScanButton extends StatelessWidget {
 
         print(barcodeScanRes);
       },
+      // elevation: 0,
       child: const Icon(Icons.filter_center_focus),
     );
   }
